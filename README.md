@@ -97,7 +97,7 @@ OUTVCF_final=/scratch/ak308/Bio310_Dog/Results/TKTL1_plink_finalcoded
 /home/ak308/Software/plink --bfile ${OUTBED} --recode --out ${OUTPLINK} --const-fid --dog
 /home/ak308/Software/plink --file  ${OUTPLINK} --recode vcf --out ${OUTVCF_final} --const-fid --dog
 
-## might also have to download plink  [downloaded today, 2/6/2026, so may not need to re-download -- though process was easy]
+##might also have to download plink  [downloaded today, 2/6/2026, so may not need to re-download -- though process was easy]
 cd /home/yourID
 mkdir software
 cd software
@@ -114,20 +114,20 @@ sed -i 's:1/1:2:g' KRT71_plink_finalcoded.vcf
 sed -i 's:./.:3:g' KRT71_plink_finalcoded.vcf
 
 
-### Move to local computer 
+###Move to local computer 
 scp -r ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/TKTL1_plink_finalcoded.vcf ~/Desktop
 
-#Plotting in R!
+# Plotting in R!
 
 library (ggplot2)
 library(dplyr)
 library (tidyverse)
 
-### Open the vcf file on your computer and save it as a csv file: 
+###Open the vcf file on your computer and save it as a csv file: 
 
 dat_hap <- read.csv("Oct26_Figure1_TSHR_Haplotype_phased.csv", header=TRUE)
 
-# organize the dataset 
+#organize the dataset 
 data_long <- gather(dat_hap, Sample, Allele, Affenpinscher01_33500_A:Wolf95_B, factor_key=TRUE)
 
 #Make my variables in factor format
