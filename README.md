@@ -48,8 +48,8 @@ also note that this was using the 1-chromosome dataset, and will need to get scr
 #SBATCH --ntasks=1 
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --time=00:30:00 
-#SBATCH --output=/home/yourname/Rice/Dog_Selection/slurmout/vcfselect.out 
-#SBATCH --error=/home/yourname/Rice/Dog_Selection/slurmout/vcfselect.err
+#SBATCH --output=/home/ak308/Bio310/output/vcfselect.out 
+#SBATCH --error=/home/ak308/Bio310/output/vcfselect.err
 
 ## Grab the specific gene from the large VCF
 
@@ -57,8 +57,8 @@ module load GCC/13.3.0
 module load VCFtools/0.1.17
 
 VCF=/storage/hpc/work/lh106/SharedData/1697canidVCF/g_WildSled.SNP.INDEL.chrAll.newID.vcf.gz
-BEDIN=/scratch/yourID/bedfiles/KRT71.bed
-OUT=/scratch/yourID/results_chrX/KRT71_vcf
+BEDIN=/scratch/ak308/Files/KRT71.bed
+OUT=/scratch/ak308/Results/KRT71_vcf
 
 vcftools --gzvcf ${VCF} --bed  ${BEDIN} --recode --recode-INFO-all --out ${OUT}
 
