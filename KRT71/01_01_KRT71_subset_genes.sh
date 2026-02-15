@@ -23,7 +23,7 @@ vcftools --gzvcf ${VCF} --bed  ${BEDIN} --recode --recode-INFO-all --out ${OUT}
 #How to make a bed file #
 #########################
 
-cd /home/ak308/Files
+cd /home/ak308/Bio310/Files/bedfiles
 mkdir bedfiles
 touch KRT71.bed
 vim KRT71.bed
