@@ -14,7 +14,7 @@ module load GCC/13.3.0
 module load VCFtools/0.1.17
 
 VCF=/scratch/lh106/SharedData/1697canidVCF/g_WildSled.SNP.INDEL.chrAll.newID.vcf.gz
-BEDIN=/home/ak308/Bio310/Files/KRT71.bed
+BEDIN=/home/ak308/Bio310/Files/bedfiles/KRT71.bed
 OUT=/scratch/ak308/Bio310_Dog/Results/KRT71_vcf
 
 vcftools --gzvcf ${VCF} --bed  ${BEDIN} --recode --recode-INFO-all --out ${OUT}
