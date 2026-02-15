@@ -27,6 +27,6 @@ sed -i 's:./.:3:g' KRT71_plink_finalcoded.vcf
 
 
 ### Move to local computer 
-### make sure you do cd into main directory first!!!
+### make sure you SIGN OUT of NOTS first!!! -- by typing "exit" in terminal
 
 scp -r ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/KRT71_plink_finalcoded.vcf ~/Desktop
