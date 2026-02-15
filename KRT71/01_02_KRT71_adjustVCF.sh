@@ -19,7 +19,7 @@ OUTVCF_final=/scratch/ak308/Bio310_Dog/Results/KRT71_plink_finalcoded
 
 cd /scratch/ak308/Bio310_Dog/Results/
 
-ed -i 's:0/0:0:g' KRT71_plink_finalcoded.vcf
+sed -i 's:0/0:0:g' KRT71_plink_finalcoded.vcf
 sed -i 's:0/1:1:g' KRT71_plink_finalcoded.vcf
 sed -i 's:1/0:1:g' KRT71_plink_finalcoded.vcf
 sed -i 's:1/1:2:g' KRT71_plink_finalcoded.vcf
