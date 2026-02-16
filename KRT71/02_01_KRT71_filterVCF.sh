@@ -11,7 +11,7 @@
 module load GCC/13.3.0
 module load VCFtools/0.1.17
 
-VCF=/scratch/ak308/Bio310/Results/KRT71_vcf.recode.vcf
+VCF=/scratch/ak308/Bio310_Dog/Results/KRT71_vcf.recode.vcf
 
 vcftools --vcf ${VCF} \
 --minQ 30 \
@@ -19,7 +19,7 @@ vcftools --vcf ${VCF} \
 --max-missing 0.8 \
 --recode \
 --recode-INFO-all \
---out /scratch/ak308/Dog_Selection/Results/KRT71_filtered
+--out /scratch/ak308/Bio310_Dog/Results/KRT71_filtered
 
 # This scripts filters the VCF file to include the following criteria that are listed here: https://vcftools.sourceforge.net/man_latest.html
 #- minQ 30 -> keep SNPs that have at least a minimum quality filter of 30
