@@ -1,4 +1,4 @@
-#!/bin/bash 
+i#!/bin/bash 
 #SBATCH --job-name=combine 
 #SBATCH --account=commons 
 #SBATCH --partition=commons 
@@ -11,9 +11,9 @@
 module load GCC/13.3.0
 module load VCFtools/0.1.17
 
-VCF=/scratch/ak308/Bio310_Dog/Results/KRT71_filtered.recode.vcf
-dogpop_curly=/home/ak308/Bio310_Dog/Files/KRT71_curlydogs.txt
-dogpop_noncurly=/home/ak308/Bio310_Dog/Files/KRT71_noncurlydogs.txt
+VCF=/scratch/ak308/Bio310/Results/KRT71_filtered.recode.vcf
+dogpop_curly=/home/ak308/Bio310/Files/KRT71_curlydogs.txt
+dogpop_noncurly=/home/ak308/Bio310/Files/KRT71_noncurlydogs.txt
 
 vcftools --vcf ${VCF} \
 --weir-fst-pop ${dogpop_curly} \
@@ -47,3 +47,24 @@ touch /scratch/ak308/Bio310_Dog/Files/KRT71_noncurlydogs.txt
 0_Basenji02
 0_BassetHound01_10376
 0_BavarianHound01
+
+
+# NOTES: before anything else, needed to: 
+
+mkdir -p /scratch/ak308/Bio310_Dog/Files
+
+# then, to make the file: 
+
+touch /scratch/ak308/Bio310_Dog/Files/KRT71_noncurlydogs_b4.text
+
+# at this point, the values were tab separated
+# to convert tab-separated to line-separated: 
+
+tr '\t' '\n' < /scratch/ak308/Bio310_Dog/Files/KRT71_noncurlydogs_orig.txt \
+> /scratch/ak308/Bio310_Dog/Files/KRT71_noncurlydogs.txt
+
+# check/verify:
+
+head /scratch/ak308/Bio310_Dog/Files/KRT71_noncurlydogs.txt
+wc -l /scratch/ak308/Bio310_Dog/Files/KRT71_noncurlydogs.txt
+
