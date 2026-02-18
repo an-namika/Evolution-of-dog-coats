@@ -12,8 +12,8 @@ module load GCC/13.3.0
 module load VCFtools/0.1.17
 
 VCF=/scratch/ak308/Bio310_Dog/Results/KRT71_filtered.recode.vcf
-dogpop_curly=/home/ak308/Bio310_Dog/Files/KRT71_curlydogs.txt
-dogpop_noncurly=/home/ak308/Bio310_Dog/Files/KRT71_noncurlydogs.txt
+dogpop_curly=/home/ak308/Bio310_Dog/Files/curlydogs.txt
+dogpop_noncurly=/home/ak308/Bio310_Dog/Files/noncurlydogs.txt
 
 vcftools --vcf ${VCF} \
 --weir-fst-pop ${dogpop_curly} \
@@ -21,9 +21,9 @@ vcftools --vcf ${VCF} \
 --out /scratch/ak308/Bio310_Dog/Results/KRT71_filtered_fst_results
 
 ## Make the dog population files 
-touch /scratch/ak308/Bio310_Dog/Files/KRT71_curlydogs.txt
+touch /scratch/ak308/Bio310_Dog/Files/curlydogs.txt
 # copy and paste the names of the dogs in the VCF file that have curly hair 
-touch /scratch/ak308/Bio310_Dog/Files/KRT71_noncurlydogs.txt
+touch /scratch/ak308/Bio310_Dog/Files/noncurlydogs.txt
 # copy and paste the names of the dogs in the VCF file that do not have curly hair 
 
 # for these population files, you would copy and paste the dog individuals that have a specific phenotype, such as 
