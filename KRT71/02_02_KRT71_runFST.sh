@@ -1,4 +1,4 @@
-i#!/bin/bash 
+#!/bin/bash 
 #SBATCH --job-name=combine 
 #SBATCH --account=commons 
 #SBATCH --partition=commons 
