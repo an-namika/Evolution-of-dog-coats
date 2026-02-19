@@ -11,7 +11,7 @@
 module load GCC/13.3.0
 module load VCFtools/0.1.17
 
-VCF=/scratch/ak308/Bio310/Results/KRT71_filtered.recode.vcf
+VCF=/scratch/ak308/Bio310_Dog/Results/KRT71_filtered.recode.vcf
 dogpop_curly=/home/ak308/Bio310/Files/KRT71_curlydogs.txt
 dogpop_noncurly=/home/ak308/Bio310/Files/KRT71_noncurlydogs.txt
 
