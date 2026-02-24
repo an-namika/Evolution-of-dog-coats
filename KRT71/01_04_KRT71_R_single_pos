@@ -1,0 +1,40 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library (ggplot2)
+library(dplyr)
+library (tidyverse)
+```
+
+## R Markdown
+
+```{r one}
+setwd("~/Downloads")
+dat_hap_KRT71 <- read.csv("KRT71_plink_finalcoded.csv", header=TRUE)
+```
+
+```{r one point one}
+# organize the dataset 
+
+dat2 <- dat_hap_KRT71[dat_hap_KRT71$POS == 2536334, ]
+
+
+data_long_KRT71 <- gather(dat2, Sample, Allele, Affenpinscher01:YorkshireTerrier77, factor_key=TRUE)
+
+#Make my variables in factor format
+data_long_KRT71$POS <- as.factor(data_long_KRT71$POS)
+data_long_KRT71$Allele <- as.factor(data_long_KRT71$Allele)
+
+#Plot with geom_tile entire KRT71 gene
+p1 <- ggplot(data_long_KRT71,aes(x=POS,y=Sample,fill=Allele))+
+      geom_tile() 
+ p2 <- p1 + scale_fill_manual(values = c("lightblue", "orange", "red", "gray", "black")) 
+p2
+
+# light blue is homozygous reference allele
+# orange is heterozygous
+# red is homozygous alternative allele
+
+ggsave("KRT71_gene.tiff", width=10,height=3)
+
+```
