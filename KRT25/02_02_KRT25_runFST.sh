@@ -22,5 +22,8 @@ vcftools --vcf ${VCF} \
 
 # #### used the KRT71 curly/noncurly dog files:
 
-/scratch/ak308/Bio310_Dog/Files/KRT71_curlydogs.txt
-/scratch/ak308/Bio310_Dog/Files/KRT71_noncurlydogs.txt
+## Make the dog population files 
+touch /scratch/ak308/Bio310_Dog/Files/KRT71_curlydogs.txt
+# copy and paste the names of the dogs in the VCF file that have curly hair 
+touch /scratch/ak308/Bio310_Dog/Files/KRT71_noncurlydogs.txt
+# copy and paste the names of the dogs in the VCF file that do not have curly hair 
