@@ -49,6 +49,8 @@ touch /scratch/ak308/Bio310_Dog/Files/KRT71_noncurlydogs.txt
 0_BavarianHound01
 
 
+# ###### okay to ignore the following!!
+
 # NOTES: before anything else, needed to: 
 
 mkdir -p /scratch/ak308/Bio310_Dog/Files
