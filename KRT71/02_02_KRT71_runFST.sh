@@ -5,8 +5,8 @@
 #SBATCH --ntasks=1 
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --time=12:30:00 
-#SBATCH --output=/home/ak308/Bio310/output/ak308_fstscan_KRT71.out 
-#SBATCH --error=/home/ak308/Bio310/output/ak308_fstscan_KRT71.err
+#SBATCH --output=/home/ak308/Bio310/output/ak308_fstscan.out 
+#SBATCH --error=/home/ak308/Bio310/output/ak308_fstscan.err
 
 module load GCC/13.3.0
 module load VCFtools/0.1.17
