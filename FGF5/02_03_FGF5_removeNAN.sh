@@ -11,4 +11,4 @@
 FILE=/scratch/ak308/Bio310_Dog/Results/FGF5_filtered_fst_results.weir.fst
 DIR=/scratch/ak308/Bio310_Dog/Results/
 
-sed '/NaN/d' ${FILE} > ${DIR}/FGF5_filtered_fst_results_noNAN.weir.fst
+sed '/n/d' ${FILE} > ${DIR}/FGF5_filtered_fst_results_noNAN.weir.fst
