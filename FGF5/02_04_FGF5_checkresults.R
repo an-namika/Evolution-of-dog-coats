@@ -14,9 +14,10 @@ Are there any variants that have a high Fst??? (>0.8?)
 #Next you can save this dataset as a .csv and upload it to R studio 
 
 library(ggplot2)
-dat <-read.csv ("FGF5_filtered_fst_results_noNAN.weir.csv", header=TRUE)
+setwd("~/Downloads")
+dat_FGF5fst <-read.csv ("FGF5_filtered_fst_results_noNAN.weir.csv", header=TRUE)
 
-ggplot(data = dat, aes(x = POS, y = WEIR_AND_COCKERHAM_FST)) +
+ggplot(data = dat_FGF5fst, aes(x = POS, y = WEIR_AND_COCKERHAM_FST)) +
   geom_point()
 
 # Do we see a candidate variant?!
