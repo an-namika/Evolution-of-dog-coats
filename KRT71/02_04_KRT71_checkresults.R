@@ -13,6 +13,7 @@ Are there any variants that have a high Fst??? (>0.8?)
 
 #Next you can save this dataset as a .csv and upload it to R studio 
 
+setwd("~/Downloads")
 library(ggplot2)
 dat_KRT71fst <-read.csv ("KRT71_filtered_fst_results_noNAN.weir.csv", header=TRUE)
 
