@@ -8,8 +8,8 @@
 #SBATCH --output=/home/ak308/Bio310/output/removeNAN.out 
 #SBATCH --error=/home/ak308/Bio310/output/removeNAN.err
 
-FILE=/scratch/ak308/Dog_Selection/Results/KRT71_filtered_fst_results.weir.fst
-DIR=/scratch/ak308/Dog_Selection/Results/
+FILE=/scratch/ak308/Bio310_Dog/Results/KRT71_filtered_fst_results.weir.fst
+DIR=/scratch/ak308/Bio310_Dog/Results/
 
 sed '/n/d' ${FILE} >  ${DIR}/KRT71_filtered_fst_results_noNAN.weir.fst.txt
 
