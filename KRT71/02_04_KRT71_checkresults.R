@@ -14,9 +14,9 @@ Are there any variants that have a high Fst??? (>0.8?)
 #Next you can save this dataset as a .csv and upload it to R studio 
 
 library(ggplot2)
-dat <-read.csv ("KRT71_filtered_fst_results_noNAN.weir.csv", header=TRUE)
+dat_KRT71fst <-read.csv ("KRT71_filtered_fst_results_noNAN.weir.csv", header=TRUE)
 
-ggplot(data = dat, aes(x = POS, y = WEIR_AND_COCKERHAM_FST)) +
+ggplot(data = dat_KRT71fst, aes(x = POS, y = WEIR_AND_COCKERHAM_FST)) +
   geom_point()
 
 # Do we see a candidate variant?!
