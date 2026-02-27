@@ -1,3 +1,16 @@
+# INSTEAD of running this script:::: 
+
+cd /scratch/ak308/Bio310_Dog/Results
+sed '/n/d' KRT71_filtered_fst_results.weir.fst > KRT71_filtered_fst_results_noNAN.weir.fst
+
+# check
+
+less KRT71_filtered_fst_results_noNAN.weir.fst
+
+-----------
+
+
+
 #!/bin/bash 
 #SBATCH --job-name=combine 
 #SBATCH --account=commons 
