@@ -11,4 +11,4 @@
 FILE=/scratch/ak308/Bio310_Dog/Results/KRT71_filtered_fst_results_2.5kbwindow_1kbstep.windowed.weir.fst
 DIR=/scratch/ak308/Bio310_Dog/Results/
 
-sed '/NaN/d' ${FILE} > ${DIR}/KRT71_filtered_fst_results_2.5kbwindow_1kbstep_noNAN.windowed.weir.fst
+sed '/n/d' ${FILE} > ${DIR}/KRT71_filtered_fst_results_2.5kbwindow_1kbstep_noNAN.windowed.weir.fst
