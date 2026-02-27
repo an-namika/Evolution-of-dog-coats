@@ -5,10 +5,10 @@
 #SBATCH --ntasks=1 
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --time=00:30:00 
-#SBATCH --output=/home/ak308/Bio310/output/removeNAN.out 
-#SBATCH --error=/home/ak308/Bio310/output/removeNAN.err
+#SBATCH --output=/home/ak308/Bio310/output/removeNAN_window_KRT71.out 
+#SBATCH --error=/home/ak308/Bio310/output/removeNAN_window_KRT71.err
 
-FILE=/scratch/ak308/Bio310_Dog/Results/KRT71_filtered_fst_results_5kbwindow_2.5kbstep.weir.fst
+FILE=/scratch/ak308/Bio310_Dog/Results/KRT71_filtered_fst_results_2.5kbwindow_1kbstep.windowed.weir.fst
 DIR=/scratch/ak308/Bio310_Dog/Results/
 
-sed '/n/d' ${FILE} >  ${DIR}/KRT71_filtered_fst_results_5kbwindow_2.5kbstep_noNAN.weir.fst.txt
+sed '/NaN/d' ${FILE} > ${DIR}/KRT71_filtered_fst_results_2.5kbwindow_1kbstep_noNAN.windowed.weir.fst
