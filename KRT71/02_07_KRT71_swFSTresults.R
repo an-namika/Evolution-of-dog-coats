@@ -2,7 +2,7 @@
 # you can bring this to your local computer: 
 
 ### Move to local computer 
-scp -r ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/KRT71_filtered_fst_results_5kbwindow_2.5kbstep_noNAN.weir.fst.txt ~/Desktop
+scp -r ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/KRT71_filtered_fst_results_2.5kbwindow_1kbstep_noNAN.weir.fst.txt ~/Desktop
 
 # Now you can open this file with text edit, then paste the results in Microsoft Excel 
 # the headers will be: 
@@ -28,7 +28,7 @@ Are there any variants that have a high WEIGHTED_FST??? (>0.8?)
 #Next you can save this dataset as a .csv and upload it to R studio 
 
 library(ggplot2)
-dat <-read.csv ("KRT71_filtered_fst_results_5kbwindow_2.5kbstep_noNAN.weir.fst.csv", header=TRUE)
+dat <-read.csv ("KRT71_filtered_fst_results_2.5kbwindow_1kbstep_noNAN.weir.fst.csv", header=TRUE)
 
 ggplot(data = dat, aes(x = POS, y = WEIGHTED_FST)) +
   geom_point()
