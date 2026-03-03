@@ -30,3 +30,8 @@ vcftools --vcf ${VCF} \
 # copy and paste the names of the dogs in the VCf file that do not have curly hair 
 
 # A window based Fst will calculate the average Fst within a 2,500bp segment of the genome. This can help reduce the noise of calculating Fst for every variant, it kind of smooths out the variation, which sometimes can be helpful to see different small genomic regions that are differienitated.
+
+
+
+# could do:
+scp -r ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/KRT71_filtered_fst_results_2.5kbwindow_1kbstep.windowed.weir.fst ~/Desktop
