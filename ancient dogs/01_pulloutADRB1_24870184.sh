@@ -19,3 +19,5 @@ OUT=/scratch/ak308/Bio310_Dog/Results/ADRB124870184_vcf_ancientcanids
 vcftools --gzvcf ${VCF} --chr chr28 --from-bp 24870184 --to-bp 24870184 --recode --recode-INFO-all --out ${OUT}
 
 #BED = candidate region 
+
+scp -r ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/ADRB124870184_vcf_ancientcanids.recode.vcf ~/Desktop
