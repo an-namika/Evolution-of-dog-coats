@@ -14,12 +14,12 @@ module load GCC/13.3.0
 module load VCFtools/0.1.17
 
 VCF=/scratch/lh106/SharedData/1697canidVCF/g_WildSled.SNP.INDEL.chrAll.newID.vcf.gz
-OUT=/scratch/ak308/Bio310_Dog/Results/modern_vcf_ancientcanids
+OUT=/scratch/ak308/Bio310_Dog/Results/modernFGF5_vcf_ancientcanids
 
 vcftools --gzvcf ${VCF} --chr chr32 --from-bp 4509367 --to-bp 4509367 --recode --recode-INFO-all --out ${OUT}
 
 
 
-scp -r ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/modern_vcf_ancientcanids.recode.vcf ~/Desktop
+scp -r ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/modernFGF5_vcf_ancientcanids.recode.vcf ~/Desktop
 
 /scratch/lh106/Dog_Selection/Fstscan_March52026/longhair_vcf_ancientcanids.recode.vcf
