@@ -25,4 +25,4 @@ sed -i 's:1/0:1:g' modernADRB1_24870184_vcf_ancientcanids_finalcoded.vcf
 sed -i 's:1/1:2:g' modernADRB1_24870184_vcf_ancientcanids_finalcoded.vcf
 sed -i 's:\./\.:3:g' modernADRB1_24870184_vcf_ancientcanids_finalcoded.vcf
 
-/scratch/ak308/Bio310_Dog/Results/modernADRB1_24870184_vcf_ancientcanids.recode.vcf
+/scratch/ak308/Bio310_Dog/Results/modernADRB1_24870184_vcf_ancientcanids_finalcoded.vcf
