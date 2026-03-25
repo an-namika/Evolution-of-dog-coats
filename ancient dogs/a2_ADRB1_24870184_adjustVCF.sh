@@ -25,4 +25,4 @@ sed -i 's:1/0:1:g' ADRB124870184_vcf_ancientcanids_finalcoded.vcf
 sed -i 's:1/1:2:g' ADRB124870184_vcf_ancientcanids_finalcoded.vcf
 sed -i 's:\./\.:3:g' ADRB124870184_vcf_ancientcanids_finalcoded.vcf
 
-scp ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/ADRB124870184_vcf_ancientcanids.recode.vcf ~/Desktop
+scp ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/ADRB124870184_vcf_ancientcanids_finalcoded.vcf ~/Desktop
