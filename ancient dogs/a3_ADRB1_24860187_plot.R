@@ -22,7 +22,7 @@ library(tidyverse)
 dat_hap <- read.csv("ADRB124860187_vcf_ancientcanids_finalcoded.csv", header=TRUE)
 
 # organize the dataset 
-data_long <- gather(dat_hap, Sample, Allele, Affenpinscher01_33500_A:Wolf95_B, factor_key=TRUE)
+data_long <- gather(dat_hap, Sample, Allele, AH575:a41599, factor_key=TRUE)
 
 #Make my variables in factor format
 data_long$POS <- as.factor(data_long$POS)
@@ -38,4 +38,5 @@ p2
 # orange is heterozygous
 # red is homozygous alternative allele
 
+ggsave("ADRB1_24860187_gene_ancient.tiff", width=10, height=3)
 ggsave("ADRB1_24860187_gene_ancient.tiff", width=10, height=3)
