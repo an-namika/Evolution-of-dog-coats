@@ -25,4 +25,4 @@ sed -i 's:1/0:1:g' ADRB124860187_vcf_ancientcanids_finalcoded.vcf
 sed -i 's:1/1:2:g' ADRB124860187_vcf_ancientcanids_finalcoded.vcf
 sed -i 's:\./\.:3:g' ADRB124860187_vcf_ancientcanids_finalcoded.vcf
 
-VCF=/scratch/lh106/SharedData/merged_phased_annotated.Autosomes_ancientdogdingo_FINAL_MAF_0.01_recalibrated_INFO_0.8.vcf.gz
+scp ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/ADRB124860187_vcf_ancientcanids_finalcoded.vcf ~/Desktop
