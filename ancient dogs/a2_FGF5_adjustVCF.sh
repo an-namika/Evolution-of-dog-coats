@@ -32,3 +32,5 @@ sed -i 's:0/1:1:g' modernFGF5_vcf_ancientcanids_finalcoded.vcf
 sed -i 's:1/0:1:g' modernFGF5_vcf_ancientcanids_finalcoded.vcf
 sed -i 's:1/1:2:g' modernFGF5_vcf_ancientcanids_finalcoded.vcf
 sed -i 's:\./\.:3:g' modernFGF5_vcf_ancientcanids_finalcoded.vcf
+
+scp ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/modernFGF5_vcf_ancientcanids_finalcoded.vcf ~/Desktop/
