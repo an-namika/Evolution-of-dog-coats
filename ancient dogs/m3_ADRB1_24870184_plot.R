@@ -23,7 +23,7 @@ library(tidyverse)
 dat_hap <- read.csv("modernADRB1_24870184_vcf_ancientcanids_finalcoded.csv", header=TRUE)
 
 # organize the dataset 
-data_long <- gather(dat_hap, Sample, Allele, Affenpinscher01_33500_A:Wolf95_B, factor_key=TRUE)
+data_long <- gather(dat_hap, Sample, Allele, Affenpinscher01:YorkshireTerrier77, factor_key=TRUE)
 
 #Make my variables in factor format
 data_long$POS <- as.factor(data_long$POS)
