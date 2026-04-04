@@ -5,8 +5,8 @@
 #SBATCH --ntasks=1 
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --time=12:30:00 
-#SBATCH --output=/home/lh106/Rice/Dog_Selection/slurmout/vcfselect.out 
-#SBATCH --error=/home/lh106/Rice/Dog_Selection/slurmout/vcfselect.err
+#SBATCH --output=/home/ak308/Bio310/output/vcf1select.out
+#SBATCH --error=/home/ak308/Bio310/output/vcf1select.err
 
 # Grab the specific gene from the large VCF
 
