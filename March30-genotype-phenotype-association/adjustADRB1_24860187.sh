@@ -5,15 +5,15 @@
 #SBATCH --ntasks=1 
 #SBATCH --mem-per-cpu=1000m 
 #SBATCH --time=00:30:00 
-#SBATCH --output=/home/ak308/Bio310/output/plink2.out 
-#SBATCH --error=/home/ak308/Bio310/output/plink2.err
+#SBATCH --output=/home/ak308/Bio310/output/plink1.out 
+#SBATCH --error=/home/ak308/Bio310/output/plink1.err
 
-VCF=/scratch/ak308/Bio310_Dog/Results/ADRB1_24870184_vcf.recode.vcf
-OUTBED=/scratch/ak308/Bio310_Dog/Results/ADRB1_24870184_vcf_bed
-OUTPLINK=/scratch/ak308/Bio310_Dog/Results/ADRB1_24870184_vcf_plink
-OUTVCF_final=/scratch/ak308/Bio310_Dog/Results/ADRB1_24870184_vcf_finalcoded
+VCF=/scratch/ak308/Bio310_Dog/Results/ADRB1_24860187_vcf.recode.vcf
+OUTBED=/scratch/ak308/Bio310_Dog/Results/ADRB1_24860187_vcf_bed
+OUTPLINK=/scratch/ak308/Bio310_Dog/Results/ADRB1_24860187_vcf_plink
+OUTVCF_final=/scratch/ak308/Bio310_Dog/Results/ADRB1_24860187_vcf_finalcoded
 
-/home/ak308/Software/plink --vcf ${VCF} --make-bed --const-fid --dog --out ${OUTBED}
+/home/ak308/Software/plink --vcf ${VCF} --make-bed --const-fid --dog --out ${OUTBED} # to sort the chromosomes
 /home/ak308/Software/plink --bfile ${OUTBED} --recode --out ${OUTPLINK} --const-fid --dog
 /home/ak308/Software/plink --file ${OUTPLINK} --recode vcf --out ${OUTVCF_final} --const-fid --dog
 
