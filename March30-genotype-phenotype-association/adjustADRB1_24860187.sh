@@ -17,7 +17,7 @@ OUTVCF_final=/scratch/ak308/Bio310_Dog/Results/ADRB1_24860187_vcf_finalcoded
 /home/ak308/Software/plink --bfile ${OUTBED} --recode --out ${OUTPLINK} --const-fid --dog
 /home/ak308/Software/plink --file  ${OUTPLINK} --recode vcf --out ${OUTVCF_final} --const-fid --dog
 
-cd /scratch/ak308/Dog_Selection/Results/
+cd /scratch/ak308/Bio310_Dog/Results/
 ##### Convert vcf to coding ######
 sed -i 's:0/0:0:g' ADRB1_24860187_vcf_finalcoded.vcf
 sed -i 's:0/1:1:g' ADRB1_24860187_vcf_finalcoded.vcf
@@ -27,4 +27,4 @@ sed -i 's:./.:3:g' ADRB1_24860187_vcf_finalcoded.vcf
 
 
 ### Move to local computer 
-scp -r ak308@nots.rice.edu:/scratch/ak308/Dog_Selection/Results/ADRB1_24860187_vcf_finalcoded.vcf ~/Desktop
+scp -r ak308@nots.rice.edu:/scratch/ak308/Bio310_Dog/Results/ADRB1_24860187_vcf_finalcoded.vcf ~/Desktop
