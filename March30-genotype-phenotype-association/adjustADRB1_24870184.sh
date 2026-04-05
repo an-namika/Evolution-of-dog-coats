@@ -8,14 +8,14 @@
 #SBATCH --output=/home/ak308/Bio310/output/plink2.out 
 #SBATCH --error=/home/ak308/Bio310/output/plink2.err
 
-OUT=/scratch/ak308/Bio310_Dog/Results/ADRB1_24870184_vcf.recode.vcf
+VCF=/scratch/ak308/Bio310_Dog/Results/ADRB1_24870184_vcf.recode.vcf
 OUTBED=/scratch/ak308/Bio310_Dog/Results/ADRB1_24870184_vcf_bed
 OUTPLINK=/scratch/ak308/Bio310_Dog/Results/ADRB1_24870184_vcf_plink
 OUTVCF_final=/scratch/ak308/Bio310_Dog/Results/ADRB1_24870184_vcf_finalcoded
 
-/home/ak308/Software/plink --vcf ${VCF} --make-bed --const-fid --dog --out ${OUTBED} #to sort the chromosomes
+/home/ak308/Software/plink --vcf ${VCF} --make-bed --const-fid --dog --out ${OUTBED}
 /home/ak308/Software/plink --bfile ${OUTBED} --recode --out ${OUTPLINK} --const-fid --dog
-/home/ak308/Software/plink --file  ${OUTPLINK} --recode vcf --out ${OUTVCF_final} --const-fid --dog
+/home/ak308/Software/plink --file ${OUTPLINK} --recode vcf --out ${OUTVCF_final} --const-fid --dog
 
 cd /scratch/ak308/Bio310_Dog/Results/
 ##### Convert vcf to coding ######
